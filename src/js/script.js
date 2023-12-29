@@ -51,7 +51,7 @@ function submitForm() {
 	}
 }
 
-// Dodano obsługę formatowania numeru telefonu
+
 document.getElementById('phone').addEventListener('input', function (event) {
 	const input = event.target
 	const inputValue = input.value.replace(/\D/g, '') // Usunięcie wszystkich niecyfrowych znaków

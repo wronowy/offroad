@@ -23,8 +23,8 @@
 .menu-toggle {
 	display: none;
 	position: fixed;
-	top: 2rem;
-	right: 2rem;
+	top: 1rem;
+	right: 1rem;
 	width: 60px;
 	height: 60px;
 	border-radius: 99px;
@@ -77,6 +77,9 @@
 	height: 200px;
 	filter: drop-shadow(5px 5px 17px #000000);
 }
+.corvus-logo{
+	width: 2rem;border-radius: 50%;
+}
 .sidebar {
 	flex: 1 1 0;
 	display: flex;
@@ -100,7 +103,7 @@
 	font-size: 2rem;
 	text-decoration: none;
 	transition: 0.2s linear;
-	text-shadow: var(--txtShadow)
+	text-shadow: var(--txtShadow);
 }
 
 .sidebar .menu .menu-item:hover,
@@ -169,10 +172,11 @@
 	}
 }
 @media (max-width: 768px) {
-	.swiper {
-		width: 28rem;
+	.swiper-slide {
+		width: 50%;
 	}
 	.menu-toggle {
+		z-index: 10000;
 		display: block;
 	}
 	.content {
@@ -191,10 +195,10 @@
 	.sidebar {
 		position: fixed;
 		top: 0;
-		left: -300px;
+		left: -400px;
 		height: 100vh;
-		// width: 100vw;
-		max-width: 300px;
+		width: 90vw;
+		// max-width: 400px;
 		transition: 0.2s linear;
 		backdrop-filter: blur(1rem);
 	}
@@ -287,12 +291,12 @@ body {
 	background-image: url('../img/offroad-4649108_1280.jpg');
 }
 .text-blur-out {
-	-webkit-animation: text-blur-out 5s cubic-bezier(0.600, -0.280, 0.735, 0.045) infinite alternate-reverse both;
-	        animation: text-blur-out 5s cubic-bezier(0.600, -0.280, 0.735, 0.045) infinite alternate-reverse both;
+	-webkit-animation: text-blur-out 5s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate-reverse both;
+	animation: text-blur-out 5s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate-reverse both;
 }
 .blur-out {
-	-webkit-animation: text-blur-out 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
-	        animation: text-blur-out 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+	-webkit-animation: text-blur-out 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) reverse both;
+	animation: text-blur-out 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) reverse both;
 }
 
 .main-content {
@@ -352,8 +356,8 @@ body {
 
 	.swiper-slide {
 		text-align: center;
-		font-size: 18px;
-
+	
+		width: 20%;
 		justify-content: center;
 		align-items: center;
 		p.name {
@@ -370,8 +374,13 @@ body {
 			box-shadow: rgba(5, 106, 18, 0.507) 0px 20px 30px -10px;
 			object-fit: cover;
 		}
+		.review {
+			width: 60%;
+			margin: 0 1rem;
+		}
 		p.review {
-			font-size: 1.3rem;
+			margin: 0 auto;
+			font-size: 1.1rem;
 			color: rgb(244, 244, 244);
 		}
 		p {
@@ -382,7 +391,7 @@ body {
 }
 
 p.info {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	text-align: center;
 	justify-content: center;
 	margin: 0 0.3rem;
@@ -391,9 +400,9 @@ p.info {
 	color: var(--lighterColor);
 }
 p.info-title {
-	padding: 5rem;
+	padding: 2rem;
 	margin-bottom: 3rem;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 }
 .icons {
 	display: flex;
@@ -641,24 +650,23 @@ a.mailus {
  * animation text-blur-out
  * ----------------------------------------
  */
- @-webkit-keyframes text-blur-out {
+@-webkit-keyframes text-blur-out {
 	0% {
-	  -webkit-filter: blur(0.01);
-			  filter: blur(0.01);
+		-webkit-filter: blur(0.01);
+		filter: blur(0.01);
 	}
 	100% {
-	  -webkit-filter: blur(12px) opacity(0%);
-			  filter: blur(12px) opacity(0%);
+		-webkit-filter: blur(12px) opacity(0%);
+		filter: blur(12px) opacity(0%);
 	}
-  }
-  @keyframes text-blur-out {
+}
+@keyframes text-blur-out {
 	0% {
-	  -webkit-filter: blur(0.01);
-			  filter: blur(0.01);
+		-webkit-filter: blur(0.01);
+		filter: blur(0.01);
 	}
 	100% {
-	  -webkit-filter: blur(12px) opacity(0%);
-			  filter: blur(12px) opacity(0%);
+		-webkit-filter: blur(12px) opacity(0%);
+		filter: blur(12px) opacity(0%);
 	}
-  }
-  
+}
